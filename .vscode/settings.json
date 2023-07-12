@@ -1,0 +1,22 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.formatDocument": true,
+    "source.fixAll": true,
+    "source.fixAll.stylelint": false
+  },
+  "eslint.run": "onSave",
+  "eslint.lintTask.enable": true,
+  "eslint.format.enable": true,
+  "stylelint.enable": true,
+  "stylelint.validate": [
+    "css",
+    "less",
+    "postcss",
+    "scss",
+    "javascript",
+    "javascriptreact"
+  ],
+  "cssVariables.lookupFiles": ["**/*.js", "**/*.styles.js", "**/*.jsx"]
+}

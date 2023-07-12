@@ -1,21 +1,29 @@
 {
-  "name": "gatsby-sanity-styled-components-boilerplate",
+  "name": "gatsby-styled-components-boilerplate",
   "version": "1.0.0",
   "private": true,
   "description": "gatsby-sanity-styled-components-boilerplate",
   "author": "lornz-",
+  "license": "MIT",
   "keywords": [
     "gatsby"
   ],
   "scripts": {
+    "prepare": "husky install",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint:style": "npx stylelint \"**/*.{css,jsx,js}\"",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "clean:modules": "rimraf node_modules yarn.lock"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^2.1.4",
+    "dotenv": "^16.3.1",
     "gatsby": "^5.11.0",
     "gatsby-plugin-google-gtag": "^5.11.0",
     "gatsby-plugin-image": "^3.11.0",
@@ -24,10 +32,57 @@
     "gatsby-plugin-sitemap": "^6.11.0",
     "gatsby-plugin-styled-components": "^6.11.0",
     "gatsby-source-filesystem": "^5.11.0",
-    "gatsby-source-sanity": "^7.7.0",
     "gatsby-transformer-sharp": "^5.11.0",
+    "polished": "^4.2.2",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "sanitize.css": "^13.0.0",
     "styled-components": "^6.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.44.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-formatjs": "^4.10.3",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.0",
+    "postcss-styled-syntax": "^0.4.0",
+    "prettier": "^3.0.0",
+    "rimraf": "^5.0.1",
+    "stylelint": "^15.10.1",
+    "stylelint-a11y": "^1.2.3",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-recommended": "^13.0.0",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-config-standard-scss": "^10.0.0",
+    "stylelint-high-performance-animation": "^1.8.0",
+    "stylelint-no-unsupported-browser-features": "^7.0.0",
+    "stylelint-prettier": "^4.0.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": "eslint --cache --fix",
+    "*.{json,md}": "prettier --write",
+    "*.{js,jsx,css}": "stylelint"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all",
+      "not safari < 10",
+      "not chrome < 51",
+      "not android < 5",
+      "not ie < 12"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
