@@ -18,5 +18,8 @@
     "javascript",
     "javascriptreact"
   ],
-  "cssVariables.lookupFiles": ["**/*.js", "**/*.styles.js", "**/*.jsx"]
+  "cssVariables.lookupFiles": ["**/*.js", "**/*.styles.js", "**/*.jsx"],
+  "path-intellisense.mappings": {
+    "@/": "${workspaceRoot}/src"
+  }
 }

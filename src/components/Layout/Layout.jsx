@@ -2,7 +2,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { GlobalStyle } from '../../styles/global';
+// styles
+import { GlobalStyle } from '@/styles/global';
 
 import 'sanitize.css';
 import 'sanitize.css/forms.css';

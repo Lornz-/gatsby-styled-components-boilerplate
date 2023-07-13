@@ -8,7 +8,7 @@
 import React from 'react';
 
 // components
-import Layout from './src/components/Layout';
+import Layout from '@/components/Layout';
 
 /**
  *  Apply Layout component to every page and template

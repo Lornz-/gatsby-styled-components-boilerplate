@@ -3,7 +3,7 @@ import { css } from 'styled-components';
 import { rem } from 'polished';
 
 // utils
-import interpolate from '../utils/math/interpolate';
+import interpolate from '@/utils/math/interpolate';
 
 export default css`
   --font-sans-serif: arial, sans-serif;
@@ -19,6 +19,6 @@ export default css`
   --letter-spacing-xl: 0.025em;
 
   /* use interpolation in a clamp function for responsive font
-    depending on a min/max font size and min/max viewport width. */
+    based on a min/max font size and min/max viewport width. */
   font-size: clamp(${rem(16)}, ${interpolate(16, 20, 480, 1280)}, ${rem(20)});
 `;

@@ -36,4 +36,12 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2020,
   },
+  settings: {
+    'import/resolver': {
+      alias: {
+        map: [['@', './src']],
+        extensions: ['.js', '.jsx', '.json'],
+      },
+    },
+  },
 };
