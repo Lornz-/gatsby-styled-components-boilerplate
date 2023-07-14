@@ -12,6 +12,7 @@ export const rootStyle = css`
   --container-min-width: 320px;
   --container-max-width: 1280px;
   --header-height: 200px;
+
   --radius-small: 10px;
   --radius-medium: 16px;
   --radius-large: 24px;
@@ -38,7 +39,7 @@ export const htmlStyle = css`
 
 export const bodyStyle = css`
   color: var(--color-black);
-  font-family: var(--font-sans-serif);
+  font-family: var(--font-sans);
   letter-spacing: var(--letter-spacing-sm);
 
   background-color: var(--color-white);
