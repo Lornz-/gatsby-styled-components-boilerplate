@@ -12,7 +12,8 @@ import 'sanitize.css/typography.css';
 const Layout = ({ children }) => (
   <>
     <GlobalStyle />
-    <main>{children}</main>;
+
+    <main>{children}</main>
   </>
 );
 
